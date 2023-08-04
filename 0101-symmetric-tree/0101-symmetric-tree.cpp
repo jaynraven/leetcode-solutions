@@ -12,16 +12,16 @@
 class Solution {
 public:
     bool isSymmetricTree(TreeNode* p, TreeNode* q) {
-    if (p != nullptr && q != nullptr &&
-        p->val == q->val)
-    {
-        return isSymmetricTree(p->left, q->right) && 
-            isSymmetricTree(p->right, q->left);
-    }
-    else if (p == nullptr && q == nullptr)
-        return true;
-    else 
-        return false;
+        if (p != nullptr && q != nullptr &&
+            p->val == q->val)
+        {
+            return isSymmetricTree(p->left, q->right) && 
+                isSymmetricTree(p->right, q->left);
+        }
+        else if (p == nullptr && q == nullptr)
+            return true;
+        else 
+            return false;
     }
     bool isSymmetric(TreeNode* root) {
         if (root == nullptr) return true;
